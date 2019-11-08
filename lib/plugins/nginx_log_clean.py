@@ -13,7 +13,7 @@ class NginxLogClean:
 
     def search_log_dir(self):
         try:
-            p1 = Popen('''find /Users/chenjingyuan1/Downloads/ -name "nginx.conf" |xargs cat |grep "log"''',
+            p1 = Popen('''find / -name "nginx.conf" |xargs cat |grep "log"''',
                        stdout=PIPE, shell=True)
             log_res_lines = p1.stdout.read().splitlines()
             for log_res in log_res_lines:
